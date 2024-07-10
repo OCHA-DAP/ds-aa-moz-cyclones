@@ -3,3 +3,4 @@ geopandas
 python-dotenv
 shapely
 jupyter-black
+matplotlib
