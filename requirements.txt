@@ -4,3 +4,4 @@ python-dotenv
 shapely
 jupyter-black
 matplotlib
+jupytext
