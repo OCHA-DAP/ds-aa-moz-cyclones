@@ -8,3 +8,4 @@ azure-storage-blob==12.20.0
 rioxarray
 dask
 jinja2
+jupytext
