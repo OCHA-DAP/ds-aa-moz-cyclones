@@ -10,3 +10,4 @@ dask
 jinja2
 jupytext
 plotly
+tqdm
