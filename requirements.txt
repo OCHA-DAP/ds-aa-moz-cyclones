@@ -4,4 +4,10 @@ python-dotenv
 shapely
 jupyter-black
 matplotlib
+azure-storage-blob==12.20.0
+rioxarray
+dask
+jinja2
 jupytext
+plotly
+tqdm
