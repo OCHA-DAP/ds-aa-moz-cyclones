@@ -5,3 +5,6 @@ shapely
 jupyter-black
 matplotlib
 jupytext
+pyarrow
+tqdm
+seaborn

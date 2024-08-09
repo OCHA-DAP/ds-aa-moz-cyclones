@@ -6,3 +6,6 @@ venv/*
 .idea
 .python-version
 
+*.pyc
+
+.ipynb_checkpoints
