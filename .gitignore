@@ -3,4 +3,9 @@
 venv/*
 .env
 .DS_Store
+.idea
+.python-version
 
+*.pyc
+
+.ipynb_checkpoints
