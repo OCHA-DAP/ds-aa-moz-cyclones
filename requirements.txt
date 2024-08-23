@@ -9,7 +9,9 @@ pandas
 plotly
 pyarrow
 python-dotenv
+requests
 rioxarray
+scipy
 seaborn
 shapely
 tqdm
