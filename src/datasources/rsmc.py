@@ -210,6 +210,11 @@ def parse_single_file(filepath) -> pd.DataFrame:
                 if cyclone_data.find("maximumWind/speed") is not None
                 else np.nan
             )
+            radius_max_wind = (
+                cyclone_data.find("maximumWind/radius").text
+                if cyclone_data.find("maximumWind/radius") is not None
+                else np.nan
+            )
 
             data.append(
                 {
@@ -222,6 +227,7 @@ def parse_single_file(filepath) -> pd.DataFrame:
                     "longitude": longitude,
                     "min_presssure_hpa": minimum_pressure,
                     "max_wind_kt": maximum_wind_speed,
+                    "radius_max_wind_nm": radius_max_wind,
                 }
             )
 
