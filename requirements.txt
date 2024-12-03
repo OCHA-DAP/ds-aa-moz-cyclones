@@ -1,6 +1,7 @@
 azure-storage-blob==12.20.0
 dask
 geopandas
+ipykernel
 jinja2
 jupyter-black
 jupytext
