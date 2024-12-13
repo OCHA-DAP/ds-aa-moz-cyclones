@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 AA_DATA_DIR = os.getenv("AA_DATA_DIR")
-ADMS = ["Sofala", "Inhambane", "Nampula", "Zambezia"]
+ADMS = ["Sofala", "Inhambane", "Nampula", "Zambezia", "Gaza", "Cabo Delgado"]
 
 
 def load_codab(admin_level: int = 1, aoi_only: bool = False):
