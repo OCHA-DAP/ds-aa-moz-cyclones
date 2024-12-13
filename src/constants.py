@@ -6,7 +6,9 @@ ADMS = [
     "Sofala", 
     "Inhambane", 
     "Nampula", 
-    "Zambezia"
+    "Zambezia",
+    "Gaza",
+    "Cabo Delgado"
 ]
 ADMS2 = [
     "Mogincual",
