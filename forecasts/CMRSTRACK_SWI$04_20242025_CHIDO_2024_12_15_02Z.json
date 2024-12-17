@@ -1,0 +1,4366 @@
+{
+    "product": "Cyclone trajectory",
+    "update_time": "2024-12-15T02:34:21Z",
+    "production_center": "METEO-FRANCE",
+    "cyclone_name": "CHIDO",
+    "cyclone_number": 4,
+    "cyclone_id": "SWI$04/20242025",
+    "basin": "SWI",
+    "season": 20242025,
+    "reference_time": "2024-12-15T00:00:00Z",
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-05T18:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1007,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    84.92,
+                    -11.79
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-06T00:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1007,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    84.41,
+                    -11.38
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-06T06:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1006,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    83.48,
+                    -11.11
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-06T12:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1006,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    81.97,
+                    -10.98
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-06T18:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1006,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    79.96,
+                    -10.9
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-07T00:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "SEQ",
+                                    "value": 180
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 100
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.72,
+                    -10.83
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-07T06:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "SEQ",
+                                    "value": 200
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.85,
+                    -10.79
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-07T12:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "Dvorak": {
+                        "final_T_number": 1,
+                        "current_intensity": 1
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.48,
+                    -10.79
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-07T18:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "Dvorak": {
+                        "final_T_number": 1,
+                        "current_intensity": 1
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    73.08,
+                    -10.78
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-08T00:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "Dvorak": {
+                        "final_T_number": 1.5,
+                        "current_intensity": 1.5
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    71.32,
+                    -10.72
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-08T06:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "Dvorak": {
+                        "final_T_number": 1.5,
+                        "current_intensity": 1.5
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    69.57,
+                    -10.68
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-08T12:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "Dvorak": {
+                        "final_T_number": 1.5,
+                        "current_intensity": 1.5
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    68.06,
+                    -10.79
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-08T18:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1005,
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "Dvorak": {
+                        "final_T_number": 2,
+                        "current_intensity": 2
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    66.49,
+                    -11.28
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-09T00:00:00Z",
+                "cyclone_data": {
+                    "development": "disturbance",
+                    "minimum_pressure": 1004,
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "Dvorak": {
+                        "final_T_number": 2,
+                        "current_intensity": 2
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    64.99,
+                    -11.48
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-09T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "tropical disturbance",
+                    "minimum_pressure": 1003,
+                    "storm_motion": {
+                        "speed_kt": 15,
+                        "direction_toward": 260
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1010,
+                        "radius": 300
+                    },
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "Dvorak": {
+                        "final_T_number": 2,
+                        "current_intensity": 2
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    64.05,
+                    -11.67
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-09T12:00:00Z",
+                "position_accuracy": 40,
+                "cyclone_data": {
+                    "development": "tropical depression",
+                    "minimum_pressure": 1002,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 280
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1010,
+                        "radius": 300
+                    },
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "Dvorak": {
+                        "final_T_number": 2.5,
+                        "current_intensity": 2.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 130
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 90
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    63.17,
+                    -11.2
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-09T18:00:00Z",
+                "position_accuracy": 30,
+                "cyclone_data": {
+                    "development": "tropical depression",
+                    "minimum_pressure": 1002,
+                    "storm_motion": {
+                        "speed_kt": 7,
+                        "direction_toward": 280
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 240
+                    },
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "Dvorak": {
+                        "final_T_number": 2.5,
+                        "current_intensity": 2.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 110
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 80
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    62.27,
+                    -11.17
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-10T00:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "moderate tropical storm",
+                    "minimum_pressure": 995,
+                    "storm_motion": {
+                        "speed_kt": 8,
+                        "direction_toward": 270
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 240
+                    },
+                    "maximum_wind": {
+                        "radius": 19,
+                        "wind_speed_kt": 40,
+                        "wind_speed_gust_kt": 55
+                    },
+                    "Dvorak": {
+                        "final_T_number": 3,
+                        "current_intensity": 3
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 110
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 80
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    61.48,
+                    -11.04
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-10T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "severe tropical storm",
+                    "minimum_pressure": 988,
+                    "storm_motion": {
+                        "speed_kt": 8,
+                        "direction_toward": 280
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 160
+                    },
+                    "maximum_wind": {
+                        "radius": 25,
+                        "wind_speed_kt": 55,
+                        "wind_speed_gust_kt": 80
+                    },
+                    "Dvorak": {
+                        "final_T_number": 3.5,
+                        "current_intensity": 3.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 110
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 120
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 95
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    60.82,
+                    -10.81
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-10T12:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "severe tropical storm",
+                    "minimum_pressure": 988,
+                    "storm_motion": {
+                        "speed_kt": 9,
+                        "direction_toward": 270
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 160
+                    },
+                    "maximum_wind": {
+                        "radius": 25,
+                        "wind_speed_kt": 55,
+                        "wind_speed_gust_kt": 80
+                    },
+                    "Dvorak": {
+                        "final_T_number": 3.5,
+                        "current_intensity": 3.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 110
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 120
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 95
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    60.17,
+                    -10.75
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-10T18:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "severe tropical storm",
+                    "minimum_pressure": 990,
+                    "storm_motion": {
+                        "speed_kt": 5,
+                        "direction_toward": 280
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 160
+                    },
+                    "maximum_wind": {
+                        "radius": 18,
+                        "wind_speed_kt": 60,
+                        "wind_speed_gust_kt": 85
+                    },
+                    "Dvorak": {
+                        "final_T_number": 3.5,
+                        "current_intensity": 3.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 75
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 65
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    59.64,
+                    -10.57
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-11T00:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "tropical cyclone",
+                    "minimum_pressure": 988,
+                    "storm_motion": {
+                        "speed_kt": 7,
+                        "direction_toward": 265
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 160
+                    },
+                    "maximum_wind": {
+                        "radius": 18,
+                        "wind_speed_kt": 70,
+                        "wind_speed_gust_kt": 100
+                    },
+                    "Dvorak": {
+                        "final_T_number": 4,
+                        "current_intensity": 4
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 75
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 65
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    59.03,
+                    -10.51
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-11T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "tropical cyclone",
+                    "minimum_pressure": 969,
+                    "storm_motion": {
+                        "speed_kt": 7,
+                        "direction_toward": 276
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 200
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 80,
+                        "wind_speed_gust_kt": 115
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 100
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 100
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 35
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 15
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    58.31,
+                    -10.5
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-11T12:00:00Z",
+                "position_accuracy": 10,
+                "cyclone_data": {
+                    "development": "tropical cyclone",
+                    "minimum_pressure": 965,
+                    "storm_motion": {
+                        "speed_kt": 8,
+                        "direction_toward": 269
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 200
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 85,
+                        "wind_speed_gust_kt": 120
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5.5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 115
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 115
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 15
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    57.47,
+                    -10.5
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-11T18:00:00Z",
+                "position_accuracy": 10,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 951,
+                    "storm_motion": {
+                        "speed_kt": 8,
+                        "direction_toward": 270
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 200
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 95,
+                        "wind_speed_gust_kt": 135
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5.5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 55
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 35
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    56.71,
+                    -10.42
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-12T00:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 951,
+                    "storm_motion": {
+                        "speed_kt": 10,
+                        "direction_toward": 260
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 200
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 100,
+                        "wind_speed_gust_kt": 140
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5.5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 55
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 35
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.61,
+                    -10.48
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-12T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 935,
+                    "storm_motion": {
+                        "speed_kt": 10,
+                        "direction_toward": 272
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 170
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 115,
+                        "wind_speed_gust_kt": 160
+                    },
+                    "Dvorak": {
+                        "final_T_number": 6.5,
+                        "current_intensity": 6.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 95
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 65
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    54.46,
+                    -10.57
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-12T12:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 936,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 260
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 170
+                    },
+                    "maximum_wind": {
+                        "radius": 12,
+                        "wind_speed_kt": 115,
+                        "wind_speed_gust_kt": 160
+                    },
+                    "Dvorak": {
+                        "final_T_number": 6.5,
+                        "current_intensity": 6.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 140
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 105
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 70
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 50
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 35
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    53.31,
+                    -10.81
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-12T18:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 940,
+                    "storm_motion": {
+                        "speed_kt": 11,
+                        "direction_toward": 265
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 210
+                    },
+                    "maximum_wind": {
+                        "radius": 10,
+                        "wind_speed_kt": 110,
+                        "wind_speed_gust_kt": 155
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5.5,
+                        "current_intensity": 6.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 90
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 50
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    52.2,
+                    -10.89
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-13T00:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 952,
+                    "storm_motion": {
+                        "speed_kt": 11,
+                        "direction_toward": 264
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 210
+                    },
+                    "maximum_wind": {
+                        "radius": 11,
+                        "wind_speed_kt": 100,
+                        "wind_speed_gust_kt": 140
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 6
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 105
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 100
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    51.01,
+                    -11.03
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-13T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 960,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 265
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1010,
+                        "radius": 125
+                    },
+                    "maximum_wind": {
+                        "radius": 14,
+                        "wind_speed_kt": 95,
+                        "wind_speed_gust_kt": 135
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 6
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 105
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 100
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 32
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    49.98,
+                    -11.21
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-13T12:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 960,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 265
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1010,
+                        "radius": 125
+                    },
+                    "maximum_wind": {
+                        "radius": 14,
+                        "wind_speed_kt": 100,
+                        "wind_speed_gust_kt": 140
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 105
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 100
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 32
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 32
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.91,
+                    -11.45
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-13T18:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 946,
+                    "storm_motion": {
+                        "speed_kt": 10,
+                        "direction_toward": 250
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 105,
+                        "wind_speed_gust_kt": 150
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 85
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 65
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 50
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    47.57,
+                    -11.83
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-14T00:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 958,
+                    "storm_motion": {
+                        "speed_kt": 14,
+                        "direction_toward": 235
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 8,
+                        "wind_speed_kt": 90,
+                        "wind_speed_gust_kt": 125
+                    },
+                    "Dvorak": {
+                        "final_T_number": 4.5,
+                        "current_intensity": 5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 85
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 85
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 55
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 40
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    46.55,
+                    -12.07
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-14T06:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 957,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 250
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 95,
+                        "wind_speed_gust_kt": 135
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5.5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 75
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 95
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 70
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 45
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    45.49,
+                    -12.54
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-14T12:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 948,
+                    "storm_motion": {
+                        "speed_kt": 14,
+                        "direction_toward": 250
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 105,
+                        "wind_speed_gust_kt": 150
+                    },
+                    "Dvorak": {
+                        "final_T_number": 6,
+                        "current_intensity": 6
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 75
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 80
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 65
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    44.17,
+                    -12.97
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-14T18:00:00Z",
+                "position_accuracy": 20,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 946,
+                    "storm_motion": {
+                        "speed_kt": 12,
+                        "direction_toward": 263
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 110,
+                        "wind_speed_gust_kt": 155
+                    },
+                    "Dvorak": {
+                        "final_T_number": 6,
+                        "current_intensity": 6
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 75
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 60
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 55
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 35
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 30
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 20
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    42.75,
+                    -13.14
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "analysis",
+                "time": "2024-12-15T00:00:00Z",
+                "position_accuracy": 10,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 962,
+                    "storm_motion": {
+                        "speed_kt": 14,
+                        "direction_toward": 263
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 105,
+                        "wind_speed_gust_kt": 150
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 15
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 10
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    41.29,
+                    -13.27
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "forecast",
+                "time": "2024-12-15T00:00:00Z",
+                "position_accuracy": 10,
+                "cyclone_data": {
+                    "development": "intense tropical cyclone",
+                    "minimum_pressure": 962,
+                    "storm_motion": {
+                        "speed_kt": 14,
+                        "direction_toward": 263
+                    },
+                    "last_closed_isobar": {
+                        "pressure": 1009,
+                        "radius": 100
+                    },
+                    "maximum_wind": {
+                        "radius": 9,
+                        "wind_speed_kt": 105,
+                        "wind_speed_gust_kt": 150
+                    },
+                    "Dvorak": {
+                        "final_T_number": 5,
+                        "current_intensity": 5.5
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 70
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 60
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 40
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 30
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 25
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 25
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 15
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 20
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 15
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 10
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    41.29,
+                    -13.27
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "forecast",
+                "hour": 12,
+                "time": "2024-12-15T12:00:00Z",
+                "position_accuracy": 35,
+                "cyclone_data": {
+                    "development": "moderate tropical storm",
+                    "maximum_wind": {
+                        "wind_speed_kt": 45,
+                        "wind_speed_gust_kt": 65
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 90
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 65
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 50
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.04,
+                    -13.59
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "forecast",
+                "hour": 24,
+                "time": "2024-12-16T00:00:00Z",
+                "position_accuracy": 55,
+                "cyclone_data": {
+                    "development": "tropical depression",
+                    "maximum_wind": {
+                        "wind_speed_kt": 30,
+                        "wind_speed_gust_kt": 40
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 85
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    36.26,
+                    -14.53
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "forecast",
+                "hour": 36,
+                "time": "2024-12-16T12:00:00Z",
+                "position_accuracy": 63,
+                "cyclone_data": {
+                    "development": "inland",
+                    "maximum_wind": {
+                        "wind_speed_kt": 25,
+                        "wind_speed_gust_kt": 35
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    34.03,
+                    -16.45
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "forecast",
+                "hour": 48,
+                "time": "2024-12-17T00:00:00Z",
+                "position_accuracy": 70,
+                "cyclone_data": {
+                    "development": "inland",
+                    "maximum_wind": {
+                        "wind_speed_kt": 20,
+                        "wind_speed_gust_kt": 30
+                    },
+                    "wind_contours": [
+                        {
+                            "wind_speed_kt": 28,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 34,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 48,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        },
+                        {
+                            "wind_speed_kt": 64,
+                            "radius": [
+                                {
+                                    "sector": "NEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SEQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "SWQ",
+                                    "value": 0
+                                },
+                                {
+                                    "sector": "NWQ",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.44,
+                    -17.1
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "data_type": "uncertainty_cone"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            41.272333535394,
+                            -13.103495712132
+                        ],
+                        [
+                            41.272333535394,
+                            -13.103495712132
+                        ],
+                        [
+                            41.136134340932,
+                            -13.100242185026
+                        ],
+                        [
+                            41.000420456732,
+                            -13.096975201504
+                        ],
+                        [
+                            40.865677193058,
+                            -13.093681305154
+                        ],
+                        [
+                            40.732389860173,
+                            -13.09034703956
+                        ],
+                        [
+                            40.601043768338,
+                            -13.086958948308
+                        ],
+                        [
+                            40.472124227817,
+                            -13.083503574984
+                        ],
+                        [
+                            40.346116548872,
+                            -13.079967463171
+                        ],
+                        [
+                            40.223506041766,
+                            -13.076337156457
+                        ],
+                        [
+                            40.104778016762,
+                            -13.072599198426
+                        ],
+                        [
+                            39.990417784123,
+                            -13.068740132665
+                        ],
+                        [
+                            39.990417784123,
+                            -13.068740132665
+                        ],
+                        [
+                            39.880668827801,
+                            -13.064736449548
+                        ],
+                        [
+                            39.774807326508,
+                            -13.060524426617
+                        ],
+                        [
+                            39.671867632647,
+                            -13.056030288203
+                        ],
+                        [
+                            39.57088409862,
+                            -13.051180258637
+                        ],
+                        [
+                            39.470891076828,
+                            -13.045900562249
+                        ],
+                        [
+                            39.370922919674,
+                            -13.040117423371
+                        ],
+                        [
+                            39.27001397956,
+                            -13.033757066335
+                        ],
+                        [
+                            39.167198608888,
+                            -13.02674571547
+                        ],
+                        [
+                            39.06151116006,
+                            -13.019009595109
+                        ],
+                        [
+                            38.951985985478,
+                            -13.010474929582
+                        ],
+                        [
+                            38.951985985478,
+                            -13.010474929582
+                        ],
+                        [
+                            38.837843952368,
+                            -13.001201202524
+                        ],
+                        [
+                            38.719051987249,
+                            -12.991780934781
+                        ],
+                        [
+                            38.595763531467,
+                            -12.982939906502
+                        ],
+                        [
+                            38.468132026364,
+                            -12.975403897837
+                        ],
+                        [
+                            38.336310913284,
+                            -12.969898688936
+                        ],
+                        [
+                            38.20045363357,
+                            -12.967150059946
+                        ],
+                        [
+                            38.060713628567,
+                            -12.967883791019
+                        ],
+                        [
+                            37.917244339619,
+                            -12.972825662304
+                        ],
+                        [
+                            37.770199208068,
+                            -12.982701453949
+                        ],
+                        [
+                            37.619731675258,
+                            -12.998236946105
+                        ],
+                        [
+                            37.619731675258,
+                            -12.998236946105
+                        ],
+                        [
+                            37.46576879388,
+                            -13.020298964767
+                        ],
+                        [
+                            37.30733206201,
+                            -13.050318519323
+                        ],
+                        [
+                            37.143216589069,
+                            -13.089867665004
+                        ],
+                        [
+                            36.97221748448,
+                            -13.140518457045
+                        ],
+                        [
+                            36.793129857666,
+                            -13.203842950677
+                        ],
+                        [
+                            36.604748818048,
+                            -13.281413201135
+                        ],
+                        [
+                            36.405869475048,
+                            -13.374801263652
+                        ],
+                        [
+                            36.195286938089,
+                            -13.485579193459
+                        ],
+                        [
+                            35.971796316594,
+                            -13.615319045791
+                        ],
+                        [
+                            35.734192719984,
+                            -13.765592875881
+                        ],
+                        [
+                            35.734192719984,
+                            -13.765592875881
+                        ],
+                        [
+                            35.482224923081,
+                            -13.936922567915
+                        ],
+                        [
+                            35.219456362311,
+                            -14.12562932189
+                        ],
+                        [
+                            34.950404139496,
+                            -14.326984166755
+                        ],
+                        [
+                            34.679585356462,
+                            -14.536258131462
+                        ],
+                        [
+                            34.411517115032,
+                            -14.748722244961
+                        ],
+                        [
+                            34.15071651703,
+                            -14.959647536201
+                        ],
+                        [
+                            33.901700664281,
+                            -15.164305034133
+                        ],
+                        [
+                            33.66898665861,
+                            -15.357965767707
+                        ],
+                        [
+                            33.457091601839,
+                            -15.535900765873
+                        ],
+                        [
+                            33.270532595793,
+                            -15.693381057581
+                        ],
+                        [
+                            33.270532595793,
+                            -15.693381057581
+                        ],
+                        [
+                            33.112576339451,
+                            -15.826885561582
+                        ],
+                        [
+                            32.981487920403,
+                            -15.937724755827
+                        ],
+                        [
+                            32.874282023395,
+                            -16.028417008065
+                        ],
+                        [
+                            32.787973333171,
+                            -16.101480686048
+                        ],
+                        [
+                            32.719576534477,
+                            -16.159434157527
+                        ],
+                        [
+                            32.666106312058,
+                            -16.204795790252
+                        ],
+                        [
+                            32.624577350658,
+                            -16.240083951974
+                        ],
+                        [
+                            32.592004335023,
+                            -16.267817010444
+                        ],
+                        [
+                            32.565401949899,
+                            -16.290513333412
+                        ],
+                        [
+                            32.541784880029,
+                            -16.31069128863
+                        ],
+                        [
+                            32.541784880029,
+                            -16.31069128863
+                        ],
+                        [
+                            32.473753425227,
+                            -16.388977452676
+                        ],
+                        [
+                            32.412993473538,
+                            -16.472670278529
+                        ],
+                        [
+                            32.359971872748,
+                            -16.561139389459
+                        ],
+                        [
+                            32.315098921831,
+                            -16.653717625665
+                        ],
+                        [
+                            32.2787250761,
+                            -16.749705935208
+                        ],
+                        [
+                            32.251138041377,
+                            -16.848378522836
+                        ],
+                        [
+                            32.232560283747,
+                            -16.948988222616
+                        ],
+                        [
+                            32.223146981294,
+                            -17.050772058679
+                        ],
+                        [
+                            32.222984442182,
+                            -17.152956956192
+                        ],
+                        [
+                            32.23208901218,
+                            -17.254765562899
+                        ],
+                        [
+                            32.250406492359,
+                            -17.355422139777
+                        ],
+                        [
+                            32.277812085149,
+                            -17.454158477795
+                        ],
+                        [
+                            32.314110883789,
+                            -17.550219796362
+                        ],
+                        [
+                            32.359038916477,
+                            -17.642870577941
+                        ],
+                        [
+                            32.412264752208,
+                            -17.731400292455
+                        ],
+                        [
+                            32.473391670253,
+                            -17.815128964715
+                        ],
+                        [
+                            32.541960390169,
+                            -17.893412537719
+                        ],
+                        [
+                            32.617452352115,
+                            -17.965647985792
+                        ],
+                        [
+                            32.699293532223,
+                            -18.031278131498
+                        ],
+                        [
+                            32.786858769719,
+                            -18.089796122559
+                        ],
+                        [
+                            32.879476576144,
+                            -18.140749526672
+                        ],
+                        [
+                            32.97643438984,
+                            -18.183744004931
+                        ],
+                        [
+                            33.076984232078,
+                            -18.218446527849
+                        ],
+                        [
+                            33.18034871478,
+                            -18.244588101884
+                        ],
+                        [
+                            33.285727343914,
+                            -18.261965978796
+                        ],
+                        [
+                            33.392303057619,
+                            -18.270445325142
+                        ],
+                        [
+                            33.499248933909,
+                            -18.269960334567
+                        ],
+                        [
+                            33.605734999853,
+                            -18.260514771258
+                        ],
+                        [
+                            33.710935072219,
+                            -18.242181938846
+                        ],
+                        [
+                            33.814033559028,
+                            -18.215104075087
+                        ],
+                        [
+                            33.914232152184,
+                            -18.179491178683
+                        ],
+                        [
+                            34.010756343287,
+                            -18.135619280497
+                        ],
+                        [
+                            34.102861697933,
+                            -18.083828177114
+                        ],
+                        [
+                            34.189839828033,
+                            -18.024518649988
+                        ],
+                        [
+                            34.271024006824,
+                            -17.958149198362
+                        ],
+                        [
+                            34.345794377215,
+                            -17.885232318495
+                        ],
+                        [
+                            34.345794377215,
+                            -17.885232318495
+                        ],
+                        [
+                            34.344954742996,
+                            -17.856015587741
+                        ],
+                        [
+                            34.346890668548,
+                            -17.82443962841
+                        ],
+                        [
+                            34.354377713641,
+                            -17.788145211927
+                        ],
+                        [
+                            34.370191438045,
+                            -17.744773109714
+                        ],
+                        [
+                            34.397107401532,
+                            -17.691964093196
+                        ],
+                        [
+                            34.437901163872,
+                            -17.627358933796
+                        ],
+                        [
+                            34.495348284835,
+                            -17.548598402937
+                        ],
+                        [
+                            34.572224324192,
+                            -17.453323272044
+                        ],
+                        [
+                            34.671304841713,
+                            -17.33917431254
+                        ],
+                        [
+                            34.79536539717,
+                            -17.203792295848
+                        ],
+                        [
+                            34.79536539717,
+                            -17.203792295848
+                        ],
+                        [
+                            34.945950484534,
+                            -17.045948039719
+                        ],
+                        [
+                            35.119680334583,
+                            -16.868932547212
+                        ],
+                        [
+                            35.311944112298,
+                            -16.677166867712
+                        ],
+                        [
+                            35.518130982657,
+                            -16.475072050606
+                        ],
+                        [
+                            35.733630110642,
+                            -16.267069145277
+                        ],
+                        [
+                            35.953830661231,
+                            -16.057579201113
+                        ],
+                        [
+                            36.174121799405,
+                            -15.851023267499
+                        ],
+                        [
+                            36.389892690144,
+                            -15.65182239382
+                        ],
+                        [
+                            36.596532498427,
+                            -15.464397629462
+                        ],
+                        [
+                            36.789430389234,
+                            -15.293170023811
+                        ],
+                        [
+                            36.789430389234,
+                            -15.293170023811
+                        ],
+                        [
+                            36.965088926021,
+                            -15.141557781117
+                        ],
+                        [
+                            37.124464266144,
+                            -15.008967725093
+                        ],
+                        [
+                            37.269625965436,
+                            -14.893803834317
+                        ],
+                        [
+                            37.402643579731,
+                            -14.794470087365
+                        ],
+                        [
+                            37.525586664861,
+                            -14.709370462815
+                        ],
+                        [
+                            37.640524776659,
+                            -14.636908939245
+                        ],
+                        [
+                            37.749527470957,
+                            -14.575489495231
+                        ],
+                        [
+                            37.854664303588,
+                            -14.523516109353
+                        ],
+                        [
+                            37.958004830384,
+                            -14.479392760187
+                        ],
+                        [
+                            38.06161860718,
+                            -14.44152342631
+                        ],
+                        [
+                            38.06161860718,
+                            -14.44152342631
+                        ],
+                        [
+                            38.167135545133,
+                            -14.408425877035
+                        ],
+                        [
+                            38.274426976709,
+                            -14.379073044614
+                        ],
+                        [
+                            38.3829245897,
+                            -14.352551652032
+                        ],
+                        [
+                            38.492060071896,
+                            -14.327948422276
+                        ],
+                        [
+                            38.601265111088,
+                            -14.304350078332
+                        ],
+                        [
+                            38.70997139507,
+                            -14.280843343187
+                        ],
+                        [
+                            38.817610611631,
+                            -14.256514939827
+                        ],
+                        [
+                            38.923614448563,
+                            -14.230451591238
+                        ],
+                        [
+                            39.027414593658,
+                            -14.201740020407
+                        ],
+                        [
+                            39.128442734707,
+                            -14.169466950319
+                        ],
+                        [
+                            39.128442734707,
+                            -14.169466950319
+                        ],
+                        [
+                            39.226359042384,
+                            -14.133000412546
+                        ],
+                        [
+                            39.321737618896,
+                            -14.092833673
+                        ],
+                        [
+                            39.415381049331,
+                            -14.049741306178
+                        ],
+                        [
+                            39.508091918779,
+                            -14.004497886575
+                        ],
+                        [
+                            39.600672812327,
+                            -13.957877988689
+                        ],
+                        [
+                            39.693926315066,
+                            -13.910656187016
+                        ],
+                        [
+                            39.788655012084,
+                            -13.863607056053
+                        ],
+                        [
+                            39.885661488469,
+                            -13.817505170296
+                        ],
+                        [
+                            39.985748329312,
+                            -13.773125104243
+                        ],
+                        [
+                            40.089718119701,
+                            -13.731241432389
+                        ],
+                        [
+                            40.089718119701,
+                            -13.731241432389
+                        ],
+                        [
+                            40.198161588299,
+                            -13.692445117337
+                        ],
+                        [
+                            40.310822038069,
+                            -13.656592674112
+                        ],
+                        [
+                            40.427230915546,
+                            -13.623357005844
+                        ],
+                        [
+                            40.546919667268,
+                            -13.592411015663
+                        ],
+                        [
+                            40.669419739771,
+                            -13.5634276067
+                        ],
+                        [
+                            40.794262579591,
+                            -13.536079682085
+                        ],
+                        [
+                            40.920979633265,
+                            -13.510040144949
+                        ],
+                        [
+                            41.049102347329,
+                            -13.484981898422
+                        ],
+                        [
+                            41.178162168321,
+                            -13.460577845633
+                        ],
+                        [
+                            41.307690542776,
+                            -13.436500889715
+                        ],
+                        [
+                            41.307690542776,
+                            -13.436500889715
+                        ],
+                        [
+                            41.322448249386,
+                            -13.434356655966
+                        ],
+                        [
+                            41.336958503947,
+                            -13.430960749154
+                        ],
+                        [
+                            41.35111066571,
+                            -13.42633906531
+                        ],
+                        [
+                            41.36479684106,
+                            -13.420526846067
+                        ],
+                        [
+                            41.377912710384,
+                            -13.413568408362
+                        ],
+                        [
+                            41.390358326889,
+                            -13.405516804613
+                        ],
+                        [
+                            41.402038881124,
+                            -13.396433416046
+                        ],
+                        [
+                            41.41286542524,
+                            -13.386387482317
+                        ],
+                        [
+                            41.422755551646,
+                            -13.375455571361
+                        ],
+                        [
+                            41.431634020169,
+                            -13.363720992932
+                        ],
+                        [
+                            41.439433329923,
+                            -13.351273161386
+                        ],
+                        [
+                            41.446094230768,
+                            -13.338206911844
+                        ],
+                        [
+                            41.451566170891,
+                            -13.324621775413
+                        ],
+                        [
+                            41.455807677143,
+                            -13.310621218993
+                        ],
+                        [
+                            41.458786665396,
+                            -13.296311855551
+                        ],
+                        [
+                            41.460480678653,
+                            -13.281802630916
+                        ],
+                        [
+                            41.460877051421,
+                            -13.267203993374
+                        ],
+                        [
+                            41.459972999159,
+                            -13.25262705239
+                        ],
+                        [
+                            41.457775632411,
+                            -13.238182732878
+                        ],
+                        [
+                            41.454301895719,
+                            -13.223980931479
+                        ],
+                        [
+                            41.449578431974,
+                            -13.210129681228
+                        ],
+                        [
+                            41.443641373459,
+                            -13.196734330947
+                        ],
+                        [
+                            41.436536061347,
+                            -13.183896745552
+                        ],
+                        [
+                            41.42831669595,
+                            -13.1717145333
+                        ],
+                        [
+                            41.419045920525,
+                            -13.160280305775
+                        ],
+                        [
+                            41.408794341956,
+                            -13.14968097611
+                        ],
+                        [
+                            41.397639991767,
+                            -13.139997100956
+                        ],
+                        [
+                            41.385667732202,
+                            -13.131302270539
+                        ],
+                        [
+                            41.372968611187,
+                            -13.123662552011
+                        ],
+                        [
+                            41.359639171525,
+                            -13.117135989787
+                        ],
+                        [
+                            41.34578071935,
+                            -13.111772166749
+                        ],
+                        [
+                            41.331498557335,
+                            -13.107611829526
+                        ],
+                        [
+                            41.316901188354,
+                            -13.104686580639
+                        ],
+                        [
+                            41.302099495521,
+                            -13.103018639789
+                        ],
+                        [
+                            41.287205904658,
+                            -13.102620676037
+                        ],
+                        [
+                            41.272333535394,
+                            -13.103495712132
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
