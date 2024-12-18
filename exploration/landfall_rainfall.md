@@ -75,6 +75,22 @@ landfall_df["USA_WIND"] = landfall_df["USA_WIND"].abs()
 ```
 
 ```python
+chido_landfall_df = pd.DataFrame(
+    {
+        "NAME": ["CHIDO"],
+        "LON": [40.58],
+        "LAT": [-13.37],
+        "USA_WIND": 107,
+        "landfall_date": [pd.to_datetime("2024-12-15")],
+        "SID": "CHIDO",
+        "SEASON": 2024,
+        "year": 2024,
+    }
+)
+landfall_df = pd.concat([landfall_df, chido_landfall_df], ignore_index=True)
+```
+
+```python
 landfall_df
 ```
 
@@ -92,9 +108,7 @@ adm1.plot()
 aoi_adm1_pcodes = adm1["ADM1_PCODE"].unique()
 ```
 
-```python
 ### IMERG
-```
 
 ```python
 IMERG_START_DATE = pd.to_datetime("2000-06-01")
