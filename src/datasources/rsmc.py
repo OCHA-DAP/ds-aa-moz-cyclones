@@ -18,20 +18,12 @@ RSMC_RAW_DIR = (
     / "rsmc"
     / "forecast_20102011_to_20232024"
 )
-RSMC_PROC_DIR = (
-    DATA_DIR
-    / "private"
-    / "processed"
-    / "moz"
-    / "rsmc"
-)
+RSMC_PROC_DIR = DATA_DIR / "private" / "processed" / "moz" / "rsmc"
 RSMC_PROC_PATH = (
-    RSMC_PROC_DIR
-    / "forecast_20102011_to_20232024_processed.parquet"
+    RSMC_PROC_DIR / "forecast_20102011_to_20232024_processed.parquet"
 )
 RSMC_PROC_DISTANCES_PATH = (
-    RSMC_PROC_DIR
-    / "rsmc_forecasts_interp_distances.parquet"
+    RSMC_PROC_DIR / "rsmc_forecasts_interp_distances.parquet"
 )
 
 
@@ -205,40 +197,100 @@ def parse_single_file(filepath) -> pd.DataFrame:
                 if cyclone_data.find("minimumPressure/pressure") is not None
                 else np.nan
             )
+            last_closed_isobar_pressure = (
+                cyclone_data.find("lastClosedIsobar/pressure").text
+                if cyclone_data.find("lastClosedIsobar/pressure") is not None
+                else np.nan
+            )
+            last_closed_isobar_radius = (
+                cyclone_data.find("lastClosedIsobar/radius").text
+                if cyclone_data.find("lastClosedIsobar/radius") is not None
+                else np.nan
+            )
             maximum_wind_speed = (
                 cyclone_data.find("maximumWind/speed").text
                 if cyclone_data.find("maximumWind/speed") is not None
                 else np.nan
             )
-            radius_max_wind = (
+            maximum_wind_gusts = (
+                cyclone_data.find("maximumWind/gusts").text
+                if cyclone_data.find("maximumWind/gusts") is not None
+                else np.nan
+            maximum_wind_radius = (
                 cyclone_data.find("maximumWind/radius").text
                 if cyclone_data.find("maximumWind/radius") is not None
                 else np.nan
             )
+            wind_radius_data = {}
 
-            data.append(
-                {
-                    "cyclone_name": cyclone_name,
-                    "cyclone_number": cyclone_number,
-                    "basin": basin,
-                    "lt_hour": hour,
-                    "valid_time": valid_time,
-                    "latitude": latitude,
-                    "longitude": longitude,
-                    "min_presssure_hpa": minimum_pressure,
-                    "max_wind_kt": maximum_wind_speed,
-                    "radius_max_wind_nm": radius_max_wind,
-                }
-            )
+            # Extract windContours data with multiple windSpeed elements
+            wind_contours = fix.find("cycloneData/windContours")
+            if wind_contours is not None:
+                for wind_speed_elem in wind_contours.findall("windSpeed"):
+                    wind_speed = (
+                        wind_speed_elem.text
+                        if wind_speed_elem.text is not None
+                        else np.nan
+                    )
+                    if wind_speed is not np.nan:
+                        # Extract radii for sectors
+                        radii = {
+                            "NWQ": np.nan,
+                            "NEQ": np.nan,
+                            "SEQ": np.nan,
+                            "SWQ": np.nan,
+                        }
+                        for radius in wind_speed_elem.findall("radius"):
+                            sector = radius.attrib.get("sector", np.nan)
+                            radius_value = (
+                                radius.text
+                                if radius.text is not None
+                                else np.nan
+                            )
+                            if sector in radii:
+                                radii[sector] = radius_value
+
+                        # Add wind speed data to the dictionary
+                        wind_radius_data[f"nwq_{wind_speed}kt_nm"] = radii[
+                            "NWQ"
+                        ]
+                        wind_radius_data[f"neq_{wind_speed}kt_nm"] = radii[
+                            "NEQ"
+                        ]
+                        wind_radius_data[f"seq_{wind_speed}kt_nm"] = radii[
+                            "SEQ"
+                        ]
+                        wind_radius_data[f"swq_{wind_speed}kt_nm"] = radii[
+                            "SWQ"
+                        ]
+
+            data_entry = {
+                "cyclone_name": cyclone_name,
+                "cyclone_number": cyclone_number,
+                "basin": basin,
+                "lt_hour": hour,
+                "valid_time": valid_time,
+                "latitude": latitude,
+                "longitude": longitude,
+                "min_presssure_hpa": minimum_pressure,
+                "last_isobar_pres_hpa": last_closed_isobar_pressure,
+                "last_isobar_rad_nm": last_closed_isobar_radius,
+                "max_wind_kt": maximum_wind_speed,
+                "max_wind_gusts_kt": maximum_wind_gusts,
+                "max_wind_radius_nm": maximum_wind_radius,
+            }
+            data_entry.update(wind_radius_data)
+            data.append(data_entry)
 
     df = pd.DataFrame(data)
     if df.empty:
         return df
 
-    float_cols = ["min_presssure_hpa", "max_wind_kt"]
-    df[float_cols] = df[float_cols].astype(float)
+    str_cols = ["cyclone_name", "basin", "valid_time"]
     int_cols = ["lt_hour", "cyclone_number"]
+    float_cols = [x for x in df.columns if x not in str_cols + int_cols]
     df[int_cols] = df[int_cols].astype(int)
+    df[float_cols] = df[float_cols].astype(float)
     df["valid_time"] = pd.to_datetime(df["valid_time"])
 
     min_lt = df["lt_hour"].min()
