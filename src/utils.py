@@ -39,3 +39,30 @@ def speed2numcat(speed: float) -> int:
         return 5
     else:
         return 6
+    
+# Define storm categories in order of intensity
+category_order = {
+    "Tropical Disturbance": 1,
+    "Tropical Depression": 2,
+    "Tropical Storm": 3,
+    "Severe Tropical Storm": 4,
+    "Tropical Cyclone": 5,
+    "Intense Tropical Cyclone": 6,
+    "Very Intense Tropical Cyclone": 7,
+}
+
+def categorize_cyclone(wind_speed):
+    if wind_speed > 115:
+        return "Very Intense Tropical Cyclone"
+    elif wind_speed >= 90:
+        return "Intense Tropical Cyclone"
+    elif wind_speed >= 64:
+        return "Tropical Cyclone"
+    elif wind_speed >= 48:
+        return "Severe Tropical Storm"
+    elif wind_speed >= 34:
+        return "Moderate Tropical Storm"
+    elif wind_speed >= 28:
+        return "Tropical Depression"
+    else:
+        return "Tropical Disturbance"
