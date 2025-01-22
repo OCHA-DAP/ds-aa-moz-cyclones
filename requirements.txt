@@ -8,6 +8,7 @@ jupytext
 matplotlib
 pandas
 plotly
+psycopg2-binary==2.9.10
 pyarrow
 python-dotenv
 requests
@@ -15,4 +16,5 @@ rioxarray
 scipy
 seaborn
 shapely
+sqlalchemy==2.0.36
 tqdm

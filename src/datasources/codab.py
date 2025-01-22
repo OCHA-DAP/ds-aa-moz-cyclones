@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 AA_DATA_DIR = os.getenv("AA_DATA_DIR")
-ADMS = ["Sofala", "Inhambane", "Nampula", "Zambezia"]
+ADMS = ["Sofala", "Inhambane", "Nampula", "Zambezia", "Gaza", "Cabo Delgado"]
 
 
 def load_codab(admin_level: int = 1, aoi_only: bool = False):
@@ -19,7 +19,7 @@ def load_codab(admin_level: int = 1, aoi_only: bool = False):
         / "raw"
         / "moz"
         / "cod_ab"
-        / admin_path
+        / f"moz_admbnda_adm{admin_level}_ine_20190607.shp"
     )
     gdf = gpd.read_file(adm_path)
     if aoi_only:

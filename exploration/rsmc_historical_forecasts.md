@@ -35,6 +35,22 @@ from src.datasources import codab, rsmc
 ```
 
 ```python
+rsmc.process_historical_forecasts()
+```
+
+```python
+rsmc.calculate_historical_forecast_distances()
+```
+
+```python
+test = rsmc.load_processed_historical_forecasts()
+```
+
+```python
+test.columns
+```
+
+```python
 adm = codab.load_codab(aoi_only=True)
 ```
 
@@ -46,6 +62,10 @@ adm
 df = rsmc.load_historical_forecast_distances()
 distance_cols = [x for x in df.columns if "_distance_km" in x]
 df["any_distance_km"] = df[distance_cols].min(axis=1)
+```
+
+```python
+df[df["name"] == "FREDDY"]
 ```
 
 ```python

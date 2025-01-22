@@ -2,7 +2,7 @@
 
 ## Background information
 
-Thie repository contains analysis for the 2024
+This repository contains analysis for the 2024
 trigger.
 
 ## Directory structure
