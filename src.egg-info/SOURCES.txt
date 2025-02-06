@@ -2,6 +2,8 @@ README.md
 pyproject.toml
 setup.cfg
 src/__init__.py
+src/constants.py
+src/utils.py
 src.egg-info/PKG-INFO
 src.egg-info/SOURCES.txt
 src.egg-info/dependency_links.txt

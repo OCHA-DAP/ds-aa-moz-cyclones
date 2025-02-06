@@ -10,9 +10,10 @@ ADMS = ["Sofala", "Inhambane", "Nampula", "Zambezia", "Gaza", "Cabo Delgado"]
 
 
 def load_codab(admin_level: int = 1, aoi_only: bool = False):
-    if admin_level not in [0,1,2]:
-        raise ValueError("Only admin level 1 is supported")
-    adm1_path = (
+    if admin_level not in [0, 1, 2, 3]:
+        raise ValueError("Only admin levels 0, 1, 2, and 3 are supported")
+    admin_path = f"moz_admbnda_adm{admin_level}_ine_20190607.shp"
+    adm_path = (
         Path(AA_DATA_DIR)
         / "public"
         / "raw"
@@ -20,7 +21,7 @@ def load_codab(admin_level: int = 1, aoi_only: bool = False):
         / "cod_ab"
         / f"moz_admbnda_adm{admin_level}_ine_20190607.shp"
     )
-    gdf = gpd.read_file(adm1_path)
+    gdf = gpd.read_file(adm_path)
     if aoi_only:
         gdf = gdf[gdf["ADM1_PT"].isin(ADMS)]
     return gdf
