@@ -11,6 +11,7 @@ plotly==5.24.1
 psycopg2-binary==2.9.10
 pyarrow==18.0.0
 python-dotenv==1.0.1
+rasterstats==0.20.0
 requests==2.32.3
 rioxarray==0.18.1
 scipy==1.14.1
