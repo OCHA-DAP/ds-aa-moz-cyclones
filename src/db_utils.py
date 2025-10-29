@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 
 AZURE_DB_PW_DEV = os.getenv("DSCI_AZ_DB_DEV_PW")
 AZURE_DB_PW_PROD = os.getenv("DSCI_AZ_DB_PROD_PW")
-AZURE_DB_UID = os.getenv("DSCI_AZ_DB_PROD_UID")
+AZURE_DB_UID = os.getenv("DSCI_AZ_DB_DEV_UID")
 AZURE_DB_BASE_URL = "postgresql+psycopg2://{uid}:{pw}@{db_name}.postgres.database.azure.com/postgres"  # noqa: E501
 
 

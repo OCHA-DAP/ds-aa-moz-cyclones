@@ -1,8 +1,37 @@
 import pandas as pd
 import numpy as np
 import glob
+import math
 from pathlib import Path
+from datetime import datetime
 from scipy.interpolate import interp1d
+from src.constants import *
+
+def categorize_storm_knots(speed_knots):
+    """
+    Categorize the storm based on its wind speed in knots.
+
+    Parameters:
+    speed_knots (float): Wind speed in knots.
+
+    Returns:
+    str: Storm category.
+    """
+    # Convert knots to km/h
+    speed_kmh = speed_knots * 1.852
+
+    if speed_kmh < 63:
+        return "Depression"
+    elif 63 <= speed_kmh < 89:
+        return "Moderate Tropical Storm"
+    elif 89 <= speed_kmh < 118:
+        return "Severe Tropical Storm"
+    elif 118 <= speed_kmh < 166:
+        return "Tropical Cyclone"
+    elif 166 <= speed_kmh < 212:
+        return "Intense Tropical Cyclone"
+    else:
+        return "Very Intense Tropical Cyclone"
 
 def load_all_cyclone_csvs(save_dir):
     # Initialize a list to store all DataFrames
@@ -557,3 +586,176 @@ def interpolate_cyclone_tracks(df):
 
     # Combine all interpolated data into one DataFrame
     return pd.concat(interpolated_data).reset_index(drop=True)
+
+def calculate_storm_return_period(
+    df, wind_speed_kmh, start_year, num_storms_year
+):
+    """
+    Calculates the return period for cyclones based on wind speed threshold.
+
+    Args:
+    df: DataFrame containing the cyclone data.
+    wind_speed_kmh: Wind speed threshold in km/h.
+    start_year: The year to start the calculation from.
+    num_storms_year: Number of storms to predict per year.
+
+    Returns:
+    None (Prints the return period and probability).
+    """
+    # Conversion factor from kilometers per hour to knots
+    kmh_to_knots = 1 / KPH2KNOTS
+
+    # Convert the given speed from km/h to knots
+    speed_knots = wind_speed_kmh * kmh_to_knots
+
+    # Extract the year from the 'ISO_TIME' column
+    df["year"] = df["ISO_TIME"].apply(
+        lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S").year
+    )
+
+    # Filter the DataFrame for records from the start year and with wind speed above the threshold
+    df_filtered = df[
+        (df["year"] >= start_year) & (df["REU_USA_WIND"] >= speed_knots)
+    ]
+
+    # Count unique storms
+    unique_storms = df_filtered["NAME"].nunique()
+
+    # Calculate the total number of years in the filtered DataFrame
+    yr_len = 2022 - start_year + 1
+
+    # Calculate the combined return period
+    combined_return_period = yr_len / unique_storms
+
+    print(
+        f"The combined return period of storms over {wind_speed_kmh}km/h is 1-in-{round(combined_return_period, 1)} years."
+    )
+
+    # Calculate return periods for each admin region
+    # admin_return_periods = {}
+
+    # grouped = df_filtered.groupby("ADM1_PT")
+    # for admin, group in grouped:
+    #    admin_unique_storms = group["NAME"].nunique()
+    #    # admin_yr_len = max(group["year"]) - min(group["year"]) + 1
+    #    admin_return_period = yr_len / admin_unique_storms
+    #    admin_return_periods[admin] = admin_return_period
+
+    #    print(
+    #        f"The return period of storms over {wind_speed_kmh}km/h in {admin} is 1-in-{round(admin_return_period, 1)} years."
+    #    )
+
+    # http://hurricanepredictor.com/Methodology/USmethodology.pdf
+    # Trying out the methodology above
+    # using Poisson distribution
+    ave_num = unique_storms / yr_len
+    expected_probability = (
+        math.exp(-ave_num)
+        * (ave_num**num_storms_year)
+        / math.factorial(num_storms_year)
+    )
+    print(
+        f"Probability of {num_storms_year} or more storms occurring in any given year is {expected_probability:.4f}."
+    )
+
+def calculate_storm_expected_probability(
+    df, wind_speed_kmh, start_year, num_storms_year
+):
+    # Conversion factor from kilometers per hour to knots
+    kmh_to_knots = 1 / KPH2KNOTS
+
+    # Convert the given speed from km/h to knots
+    speed_knots = wind_speed_kmh * kmh_to_knots
+
+    # Extract the year from the 'ISO_TIME' column
+    df["year"] = df["ISO_TIME"].apply(
+        lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S").year
+    )
+
+    # Filter the DataFrame for records from the start year and with wind speed above the threshold
+    df_filtered = df[
+        (df["year"] >= start_year) & (df["REU_USA_WIND"] >= speed_knots)
+    ]
+
+    # Count unique storms
+    unique_storms = df_filtered["NAME"].nunique()
+
+    # Calculate the total number of years in the filtered DataFrame
+    yr_len = 2022 - start_year + 1
+
+    # Calculate the combined return period
+    # http://hurricanepredictor.com/Methodology/USmethodology.pdf
+    # Trying out the methodology above
+    # using Poisson distribution
+    ave_num = unique_storms / yr_len
+    expected_probability = (
+        math.exp(-ave_num)
+        * (ave_num**num_storms_year)
+        * math.factorial(num_storms_year)
+    )
+    return expected_probability
+
+def calculate_storm_return_period_la_reunion(
+    df, wind_speed_kmh, start_year, num_storms_year
+):
+
+    # Conversion factor from kilometers per hour to knots
+    kmh_to_knots = 1 / KPH2KNOTS
+
+    # Convert the given speed from km/h to knots
+    speed_knots = wind_speed_kmh * kmh_to_knots
+
+    # Ensure UTC is formatted as a two-digit hour
+    df["UTC"] = df["UTC"].apply(lambda x: f"{int(x):02}")
+    # Create a datetime column from separate date and time columns
+    df["ISO_TIME"] = pd.to_datetime(
+        df[["Year", "Month", "Day", "UTC"]].astype(str).agg(" ".join, axis=1)
+    )
+
+    # Extract the year from the 'ISO_TIME' column
+    df["year"] = df["ISO_TIME"].dt.year
+
+    # Filter the DataFrame for records from the start year and with wind speed above the threshold
+    df_filtered = df[
+        (df["year"] >= start_year) & (df["Max wind (kt)"] >= speed_knots)
+    ]
+
+    # Count unique storms
+    unique_storms = df_filtered["Name"].nunique()
+
+    # Calculate the total number of years in the filtered DataFrame
+    yr_len = 2023 - start_year + 1
+
+    # Calculate the combined return period
+    combined_return_period = yr_len / unique_storms
+
+    print(
+        f"The combined return period of storms over {wind_speed_kmh} km/h is 1-in-{round(combined_return_period, 1)} years."
+    )
+
+    # Calculate return periods for each administrative region
+    # admin_return_periods = {}
+
+    # grouped = df_filtered.groupby("ADM1_PT")
+    # for admin, group in grouped:
+    #    admin_unique_storms = group["Name"].nunique()
+    #    admin_return_period = yr_len / admin_unique_storms
+    #    admin_return_periods[admin] = admin_return_period
+
+    #    print(
+    #        f"The return period of storms over {wind_speed_kmh} km/h in {admin} is 1-in-{round(admin_return_period, 1)} years."
+    #    )
+
+    # Calculate probabilities using the Poisson distribution
+    ave_num = unique_storms / yr_len
+    expected_probability = (
+        math.exp(-ave_num)
+        * (ave_num**num_storms_year)
+        / math.factorial(num_storms_year)
+    )
+    print(
+        f"The probability of exactly {num_storms_year} storms making landfall in an average year is {round(expected_probability * 100, 1)}%."
+    )
+    print(
+        f"The return period of exactly {num_storms_year} storms making landfall in an average year is 1-in-{round(1 / expected_probability, 1)} years."
+    )
