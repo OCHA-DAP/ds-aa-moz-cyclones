@@ -2,6 +2,7 @@ import os
 import pandas as pd
 
 # Conversion factors
+moz_epsg = 3857
 KNOTS2MS = 0.514444
 KPH2KNOTS = 1.852
 MPS2KTS = 1.94384
@@ -25,7 +26,7 @@ ADMS = [
     "Nampula", 
     "Zambezia",
     "Gaza",
-    "Cabo Delgado"
+    "Cabo Delgado",
 ]
 
 # List of specific districts or cities (ADMs2) for further analysis
@@ -75,6 +76,22 @@ wind_speed_categories = {
 }
 
 # Complete list of storms we are interested in
+ADM2_48 = [
+    "Angoche",
+    "Maganja Da Costa",
+    "Machanga",
+    "Govuro",
+]
+ADM2_64 = [
+    "Mogincual",
+    "Namacurra",
+    "Dondo",
+    "Cidade Da Beira",
+    "Buzi",
+    "Vilankulo",
+]
+AA_DATA_DIR = os.getenv("AA_DATA_DIR")
+AA_DATA_DIR_NEW = os.getenv("AA_DATA_DIR_NEW")
 all_storms = [
     "FAVIO",
     "JOKWE",
@@ -178,3 +195,4 @@ storm_df = pd.DataFrame(
         ],
     }
 )
+]
