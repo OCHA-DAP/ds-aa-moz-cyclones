@@ -216,6 +216,7 @@ def parse_single_file(filepath) -> pd.DataFrame:
                 cyclone_data.find("maximumWind/gusts").text
                 if cyclone_data.find("maximumWind/gusts") is not None
                 else np.nan
+            )
             maximum_wind_radius = (
                 cyclone_data.find("maximumWind/radius").text
                 if cyclone_data.find("maximumWind/radius") is not None
