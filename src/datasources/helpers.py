@@ -1,4 +1,5 @@
 import pandas as pd
+import geopandas as gpd
 import numpy as np
 import glob
 import math
@@ -622,7 +623,7 @@ def calculate_storm_return_period(
     unique_storms = df_filtered["NAME"].nunique()
 
     # Calculate the total number of years in the filtered DataFrame
-    yr_len = 2022 - start_year + 1
+    yr_len = 2024 - start_year + 1
 
     # Calculate the combined return period
     combined_return_period = yr_len / unique_storms
@@ -759,3 +760,549 @@ def calculate_storm_return_period_la_reunion(
     print(
         f"The return period of exactly {num_storms_year} storms making landfall in an average year is 1-in-{round(1 / expected_probability, 1)} years."
     )
+
+def calculate_metrics_by_category(
+    gdf_points,
+    save_dir,
+    categorize_cyclone,
+    category_order,
+    longitude_cutoffs=None,
+    buffer_kms=None,
+    storm_category_filters=None,
+):
+    # Initialize lists to store metrics
+    all_metrics = []
+
+    # Iterate over all cyclone files
+    for cyclone_file_path in glob.glob(str(save_dir / "csv/*_all.csv")):
+        cyclone_name = Path(cyclone_file_path).stem.split("_")[0]
+        print(f"Processing file: {cyclone_file_path}")
+
+        gdf_points_cyclone = gdf_points[
+            gdf_points["NAME"] == cyclone_name.upper()
+        ]
+        gdf_points_cyclone["ISO_TIME"] = pd.to_datetime(
+            gdf_points_cyclone["ISO_TIME"]
+        )
+
+        if gdf_points_cyclone.empty:
+            print(f"No data found for cyclone: {cyclone_name}")
+            continue
+
+        cyclone_file = pd.read_csv(cyclone_file_path)
+        cyclone_file["time"] = pd.to_datetime(cyclone_file["time"])
+
+        cyclone_df = (
+            cyclone_file[
+                ["time", "speed", "lat", "lon", "lead_time", "forecast_time"]
+            ]
+            .groupby(["time", "forecast_time"])
+            .median()
+            .reset_index()
+        )
+
+        df = pd.merge(
+            gdf_points_cyclone,
+            cyclone_df,
+            left_on="ISO_TIME",
+            right_on="time",
+            how="inner",
+        )
+
+        if df.empty:
+            print(f"After merging, no data found for cyclone: {cyclone_name}")
+            continue
+
+        df["speed_knots"] = df["speed"] * 1.94384
+
+        # Apply the function to create a new column "cyclone_category"
+        df["actual_storm_category"] = df["REU_USA_WIND"].apply(
+            categorize_cyclone
+        )
+        df["forecasted_storm_category"] = df["speed_knots"].apply(
+            categorize_cyclone
+        )
+
+        # Apply category order for comparison
+        df["actual_category_rank"] = df["actual_storm_category"].map(
+            category_order
+        )
+        df["forecasted_category_rank"] = df["forecasted_storm_category"].map(
+            category_order
+        )
+
+        # Filter by actual storm category if specified
+        if storm_category_filters:
+            df = df[df["actual_storm_category"].isin(storm_category_filters)]
+
+        # Apply longitude cutoff
+        if longitude_cutoffs:
+            df = df[df["lon"] < max(longitude_cutoffs)]
+
+        # Apply buffer around GeoDataFrame
+        if buffer_kms:
+            buffered_gdf = gdf_sel.copy()
+            buffered_gdf["geometry"] = buffered_gdf.buffer(buffer_kms / 111)
+            df = df[
+                df.apply(
+                    lambda row: any(
+                        buffered_gdf.contains(
+                            gpd.GeoSeries(
+                                gpd.points_from_xy([row["lon"]], [row["lat"]])
+                            )
+                        )
+                    ),
+                    axis=1,
+                )
+            ]
+
+        # Add columns to indicate the metrics
+        df["correct_category"] = (
+            df["actual_category_rank"] == df["forecasted_category_rank"]
+        )
+        df["stronger_than_forecasted"] = (
+            df["actual_category_rank"] > df["forecasted_category_rank"]
+        )
+        df["weaker_than_forecasted"] = (
+            df["actual_category_rank"] < df["forecasted_category_rank"]
+        )
+
+        # Group by 'lead_time' and calculate the count of each metric
+        metrics_by_lead_time_category = (
+            df.groupby(["lead_time"])
+            .agg(
+                {
+                    "correct_category": "sum",
+                    "stronger_than_forecasted": "sum",
+                    "weaker_than_forecasted": "sum",
+                }
+            )
+            .reset_index()
+        )
+
+        # Append metrics to the list
+        all_metrics.append(metrics_by_lead_time_category)
+
+    if not all_metrics:
+        raise ValueError(
+            "No metrics were collected. Please check the files and data."
+        )
+
+    # Combine all metrics
+    combined_metrics = pd.concat(all_metrics)
+
+    return combined_metrics
+
+# Function to compute the location error metrics
+def compute_location_error_metrics(
+    gdf_points, save_dir, gdf_sel, storm_categories=[]
+):
+    # Initialize lists to store metrics
+    all_metrics = []
+
+    # Iterate over all cyclone files
+    for cyclone_file_path in glob.glob(str(save_dir / "csv/*_all.csv")):
+        cyclone_name = Path(cyclone_file_path).stem.split("_")[0]
+
+        gdf_points_cyclone = gdf_points[
+            gdf_points["NAME"] == cyclone_name.upper()
+        ]
+        gdf_points_cyclone["ISO_TIME"] = pd.to_datetime(
+            gdf_points_cyclone["ISO_TIME"]
+        )
+
+        cyclone_file = pd.read_csv(cyclone_file_path)
+        cyclone_file["time"] = pd.to_datetime(cyclone_file["time"])
+
+        cyclone_df = (
+            cyclone_file[
+                ["time", "speed", "lat", "lon", "lead_time", "forecast_time"]
+            ]
+            .groupby(["time", "forecast_time"])
+            .median()
+            .reset_index()
+        )
+        cyclone_df["lat"] = cyclone_df["lat"].apply(
+            lambda x: -x if x > 0 else x
+        )
+
+        df = pd.merge(
+            gdf_points_cyclone,
+            cyclone_df,
+            left_on="ISO_TIME",
+            right_on="time",
+            how="inner",
+        )
+
+        # Check if actual points are within the region
+        df["actual_within_region"] = df.apply(
+            lambda row: is_within_region(row["LAT"], row["LON"], gdf_sel),
+            axis=1,
+        )
+
+        # Filter out forecasts that are not within the region
+        df = df[df["actual_within_region"]]
+
+        # Check if forecasted location is within the region
+        df["forecast_within_region"] = df.apply(
+            lambda row: is_within_region(row["lat"], row["lon"], gdf_sel),
+            axis=1,
+        )
+
+        # Calculate the distance error using the Haversine formula
+        df["location_error_km"] = df.apply(
+            lambda row: haversine(
+                row["LON"], row["LAT"], row["lon"], row["lat"]
+            ),
+            axis=1,
+        )
+
+        # Filter by storm categories if provided
+        if storm_categories:
+            df = df[df["actual_storm_category"].isin(storm_categories)]
+
+        # Group by 'lead_time' and calculate the mean and standard deviation of location error
+        metrics_by_lead_time_location = (
+            df.groupby(["lead_time"])
+            .agg(
+                {
+                    "location_error_km": ["mean", "std"],
+                    "forecast_within_region": "mean",
+                }
+            )
+            .reset_index()
+        )
+
+        # Flatten the multi-level columns
+        metrics_by_lead_time_location.columns = [
+            "lead_time",
+            "mean_location_error_km",
+            "std_location_error_km",
+            "mean_forecast_within_region",
+        ]
+
+        # Append metrics to the list
+        all_metrics.append(metrics_by_lead_time_location)
+
+    if not all_metrics:
+        raise ValueError(
+            "No metrics were collected. Please check the files and data."
+        )
+
+    # Combine all metrics
+    combined_metrics = pd.concat(all_metrics)
+
+    return combined_metrics
+
+def compute_location_error_metrics_by_category(
+    gdf_points, save_dir, gdf_sel, storm_categories=[]
+):
+    # Initialize lists to store metrics
+    all_metrics = []
+
+    # Iterate over all cyclone files
+    for cyclone_file_path in glob.glob(str(save_dir / "csv/*_all.csv")):
+        cyclone_name = Path(cyclone_file_path).stem.split("_")[0]
+
+        gdf_points_cyclone = gdf_points[gdf_points["NAME"] == cyclone_name.upper()]
+        gdf_points_cyclone["ISO_TIME"] = pd.to_datetime(gdf_points_cyclone["ISO_TIME"])
+
+        cyclone_file = pd.read_csv(cyclone_file_path)
+        cyclone_file["time"] = pd.to_datetime(cyclone_file["time"])
+
+        cyclone_df = (
+            cyclone_file[["time", "speed", "lat", "lon", "lead_time", "forecast_time"]]
+            .groupby(["time", "forecast_time"])
+            .median()
+            .reset_index()
+        )
+        cyclone_df["lat"] = cyclone_df["lat"].apply(lambda x: -x if x > 0 else x)
+        df = pd.merge(
+            gdf_points_cyclone,
+            cyclone_df,
+            left_on="ISO_TIME",
+            right_on="time",
+            how="inner",
+        )
+
+        # Ensure columns are correctly referenced
+        df["actual_within_region"] = df.apply(
+            lambda row: is_within_region(row["LAT"], row["LON"], gdf_sel),
+            axis=1,
+        )
+
+        df = df[
+            df["actual_within_region"]
+        ]  # Filter out forecasts not within the region
+
+        df["forecast_within_region"] = df.apply(
+            lambda row: is_within_region(row["lat"], row["lon"], gdf_sel),
+            axis=1,
+        )
+
+        # Calculate location error
+        df["location_error_km"] = df.apply(
+            lambda row: haversine(row["LON"], row["LAT"], row["lon"], row["lat"]),
+            axis=1,
+        )
+
+        # Filter by storm categories if provided
+        if storm_categories:
+            df = df[df["actual_storm_category"].isin(storm_categories)]
+
+        # Find the first landfall point for each storm
+        first_landfall_df = (
+            df[df["actual_within_region"]]
+            .groupby("NAME")
+            .mean(["location_error_km"])
+            .reset_index()
+        )
+
+        # Group by storm category and calculate metrics
+        metrics_by_category = first_landfall_df[["NAME", "location_error_km"]]
+
+        # Append metrics to the list
+        all_metrics.append(metrics_by_category)
+
+    if not all_metrics:
+        raise ValueError("No metrics were collected. Please check the files and data.")
+
+    # Combine all metrics
+    combined_metrics = pd.concat(all_metrics)
+
+    return combined_metrics
+
+def compute_within_region_metrics(gdf_points, save_dir, gdf_sel):
+    # Initialize lists to store metrics
+    all_metrics = []
+
+    # Iterate over all cyclone files
+    for cyclone_file_path in glob.glob(str(save_dir / "csv/*_all.csv")):
+        cyclone_name = Path(cyclone_file_path).stem.split("_")[0]
+        print(f"Processing file: {cyclone_file_path}")
+
+        gdf_points_cyclone = gdf_points[gdf_points["NAME"] == cyclone_name.upper()]
+        gdf_points_cyclone["ISO_TIME"] = pd.to_datetime(gdf_points_cyclone["ISO_TIME"])
+
+        if gdf_points_cyclone.empty:
+            print(f"No data found for cyclone: {cyclone_name}")
+            continue
+
+        cyclone_file = pd.read_csv(cyclone_file_path)
+        cyclone_file["time"] = pd.to_datetime(cyclone_file["time"])
+
+        cyclone_df = (
+            cyclone_file[["time", "speed", "lat", "lon", "lead_time", "forecast_time"]]
+            .groupby(["time", "forecast_time"])
+            .median()
+            .reset_index()
+        )
+        cyclone_df["lat"] = cyclone_df["lat"].apply(lambda x: -x if x > 0 else x)
+        df = pd.merge(
+            gdf_points_cyclone,
+            cyclone_df,
+            left_on="ISO_TIME",
+            right_on="time",
+            how="inner",
+        )
+
+        if df.empty:
+            print(f"After merging, no data found for cyclone: {cyclone_name}")
+            continue
+
+        # Check if forecasted location is within the region
+        df["forecast_within_region"] = df.apply(
+            lambda row: is_within_region(row["lat"], row["lon"], gdf_sel),
+            axis=1,
+        )
+
+        # Check if actual location is within the region
+        df["actual_within_region"] = df.apply(
+            lambda row: is_within_region(row["LAT"], row["LON"], gdf_sel),
+            axis=1,
+        )
+
+        def calculate_metrics(df):
+            # Correctly Forecasted as Inside Region
+            correct_positive = df[
+                (df["forecast_within_region"]) & (df["actual_within_region"])
+            ]
+            # Incorrectly Forecasted as Inside Region
+            false_positive = df[
+                (df["forecast_within_region"]) & (~df["actual_within_region"])
+            ]
+            # Incorrectly Forecasted as Outside Region
+            false_negative = df[
+                (~df["forecast_within_region"]) & (df["actual_within_region"])
+            ]
+            # Correctly Forecasted as Outside Region
+            correct_negative = df[
+                (~df["forecast_within_region"]) & (~df["actual_within_region"])
+            ]
+
+            num_within_region = len(df[df["actual_within_region"]])
+            num_outside_region = len(df[~df["actual_within_region"]])
+
+            percentage_correct_positive = (
+                (len(correct_positive) / num_within_region * 100)
+                if num_within_region > 0
+                else 0
+            )
+            percentage_false_positive = (
+                (len(false_positive) / num_within_region * 100)
+                if num_within_region > 0
+                else 0
+            )
+            percentage_false_negative = (
+                (len(false_negative) / num_outside_region * 100)
+                if num_outside_region > 0
+                else 0
+            )
+            percentage_correct_negative = (
+                (len(correct_negative) / num_outside_region * 100)
+                if num_outside_region > 0
+                else 0
+            )
+
+            return pd.Series(
+                {
+                    "percentage_correct_positive": percentage_correct_positive,
+                    "percentage_false_positive": percentage_false_positive,
+                    "percentage_false_negative": percentage_false_negative,
+                    "percentage_correct_negative": percentage_correct_negative,
+                }
+            )
+
+        # Group by 'lead_time' and calculate metrics
+        metrics_df = df.groupby("lead_time").apply(calculate_metrics).reset_index()
+        all_metrics.append(metrics_df)
+
+    # Combine all metrics
+    combined_metrics = pd.concat(all_metrics)
+
+    # Group by lead time and get the mean
+    combined_metrics = combined_metrics.groupby("lead_time").mean().reset_index()
+
+    return combined_metrics
+
+def compute_within_region_metrics(gdf_points, save_dir, gdf_sel):
+    # Initialize lists to store metrics
+    all_metrics = []
+
+    # Iterate over all cyclone files
+    for cyclone_file_path in glob.glob(str(save_dir / "csv/*_all.csv")):
+        cyclone_name = Path(cyclone_file_path).stem.split("_")[0]
+        print(f"Processing file: {cyclone_file_path}")
+
+        gdf_points_cyclone = gdf_points[gdf_points["NAME"] == cyclone_name.upper()]
+        gdf_points_cyclone["ISO_TIME"] = pd.to_datetime(gdf_points_cyclone["ISO_TIME"])
+
+        if gdf_points_cyclone.empty:
+            print(f"No data found for cyclone: {cyclone_name}")
+            continue
+
+        cyclone_file = pd.read_csv(cyclone_file_path)
+        cyclone_file["time"] = pd.to_datetime(cyclone_file["time"])
+
+        cyclone_df = (
+            cyclone_file[["time", "speed", "lat", "lon", "lead_time", "forecast_time"]]
+            .groupby(["time", "forecast_time"])
+            .median()
+            .reset_index()
+        )
+        cyclone_df["lat"] = cyclone_df["lat"].apply(lambda x: -x if x > 0 else x)
+        df = pd.merge(
+            gdf_points_cyclone,
+            cyclone_df,
+            left_on="ISO_TIME",
+            right_on="time",
+            how="inner",
+        )
+
+        if df.empty:
+            print(f"After merging, no data found for cyclone: {cyclone_name}")
+            continue
+
+        # Iterate over each province in gdf_sel
+        for province_name in gdf_sel["ADM1_PT"].unique():
+            print(f"Processing province: {province_name}")
+
+            gdf_province = gdf_sel[gdf_sel["ADM1_PT"] == province_name]
+
+            # Check if forecasted location is within the province
+            df["forecast_within_province"] = df.apply(
+                lambda row: is_within_region(row["lat"], row["lon"], gdf_province),
+                axis=1,
+            )
+
+            # Check if actual location is within the province
+            df["actual_within_province"] = df.apply(
+                lambda row: is_within_region(row["LAT"], row["LON"], gdf_province),
+                axis=1,
+            )
+
+            def calculate_metrics(df):
+                # Correctly Forecasted as Inside Province
+                correct_positive = df[
+                    (df["forecast_within_province"]) & (df["actual_within_province"])
+                ]
+                # Incorrectly Forecasted as Inside Province
+                false_positive = df[
+                    (df["forecast_within_province"]) & (~df["actual_within_province"])
+                ]
+                # Incorrectly Forecasted as Outside Province
+                false_negative = df[
+                    (~df["forecast_within_province"]) & (df["actual_within_province"])
+                ]
+                # Correctly Forecasted as Outside Province
+                correct_negative = df[
+                    (~df["forecast_within_province"]) & (~df["actual_within_province"])
+                ]
+
+                num_within_province = len(df[df["actual_within_province"]])
+                num_outside_province = len(df[~df["actual_within_province"]])
+
+                percentage_correct_positive = (
+                    (len(correct_positive) / num_within_province * 100)
+                    if num_within_province > 0
+                    else 0
+                )
+                percentage_false_positive = (
+                    (len(false_positive) / num_within_province * 100)
+                    if num_within_province > 0
+                    else 0
+                )
+                percentage_false_negative = (
+                    (len(false_negative) / num_outside_province * 100)
+                    if num_outside_province > 0
+                    else 0
+                )
+                percentage_correct_negative = (
+                    (len(correct_negative) / num_outside_province * 100)
+                    if num_outside_province > 0
+                    else 0
+                )
+
+                return pd.Series(
+                    {
+                        "percentage_correct_positive": percentage_correct_positive,
+                        "percentage_false_positive": percentage_false_positive,
+                        "percentage_false_negative": percentage_false_negative,
+                        "percentage_correct_negative": percentage_correct_negative,
+                    }
+                )
+
+            # Calculate metrics for each lead time separately
+            metrics_df = df.groupby("lead_time").apply(calculate_metrics).reset_index()
+            metrics_df["province"] = province_name  # Add province name
+            all_metrics.append(metrics_df)
+
+    # Combine all metrics
+    combined_metrics = pd.concat(all_metrics)
+
+    # Group by province and lead time, then get the mean
+    combined_metrics = (
+        combined_metrics.groupby(["province", "lead_time"]).mean().reset_index()
+    )
+
+    return combined_metrics

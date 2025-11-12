@@ -1,9 +1,13 @@
 import os
+import pandas as pd
 
 # Conversion factors
 KNOTS2MS = 0.514444
 KPH2KNOTS = 1.852
+MPS2KTS = 1.94384
 MIN1_TO_MIN10 = 0.88
+KMS2DEGREE = 110.574
+
 RAIN_THRESH = 120
 # geo
 EPSG_CRS = "EPSG:4326"
@@ -41,6 +45,12 @@ ADMS2 = [
 # Environment variables for data directories
 AA_DATA_DIR = os.getenv("AA_DATA_DIR") 
 AA_DATA_DIR_NEW = os.getenv("AA_DATA_DIR_NEW") 
+DEV_BLOB_SAS = os.getenv("DSCI_AZ_SAS_DEV")
+DEV_BLOB_NAME = "imb0chd0dev"
+DEV_BLOB_URL = f"https://{DEV_BLOB_NAME}.blob.core.windows.net/"
+DEV_BLOB_PROJ_URL = DEV_BLOB_URL + "projects" + "?" + DEV_BLOB_SAS
+GLOBAL_CONTAINER_NAME = "global"
+DEV_BLOB_GLB_URL = DEV_BLOB_URL + GLOBAL_CONTAINER_NAME + "?" + DEV_BLOB_SAS
 
 # Define storm categories in order of intensity
 category_order = {
@@ -63,3 +73,108 @@ wind_speed_categories = {
     166: "Intense Tropical Cyclone (90-115 kt)",
     212: "Very Intense Tropical Cyclone (>115 kt)",
 }
+
+# Complete list of storms we are interested in
+all_storms = [
+    "FAVIO",
+    "JOKWE",
+    "IZILDA",
+    "DANDO",
+    "IRINA",
+    "HARUNA",
+    "DELIWE",
+    "GUITO",
+    "HELLEN",
+    "CHEDZA",
+    "DINEO",
+    "DESMOND",
+    "IDAI",
+    "KENNETH",
+    "CHALANE",
+    "ELOISE",
+    "GUAMBE",
+    "ANA",
+    "GOMBE",
+    "JASMINE",
+    "FREDDY",
+    "FILIPO",
+]
+
+# List of storms
+# Creating the DataFrame
+storm_df = pd.DataFrame(
+    {
+        "storm": [
+            "FAVIO",
+            "JOKWE",
+            "IZILDA",
+            "DANDO",
+            "IRINA",
+            "HARUNA",
+            "DELIWE",
+            "GUITO",
+            "HELLEN",
+            "CHEDZA",
+            "DINEO",
+            "DESMOND",
+            "IDAI",
+            "KENNETH",
+            "CHALANE",
+            "ELOISE",
+            "GUAMBE",
+            "ANA",
+            "GOMBE",
+            "JASMINE",
+            "FREDDY",
+            "FILIPO",
+        ],
+        "Total Affected": [
+            162770,
+            220013,
+            7103,
+            40042,
+            4958,
+            None,
+            None,
+            None,
+            None,
+            None,
+            750102,
+            None,
+            1628167,
+            400094,
+            73254,
+            481901,
+            None,
+            185429,
+            736015,
+            None,
+            1143569,
+            50781,
+        ],
+        "CERF Allocations (USD)": [
+            1070014,
+            548913,
+            None,
+            None,
+            None,
+            None,
+            None,
+            None,
+            None,
+            None,
+            2000095,
+            None,
+            14018121,
+            9964907,
+            None,
+            None,
+            None,
+            None,
+            4018682,
+            None,
+            9995213,
+            None,
+        ],
+    }
+)
