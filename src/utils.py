@@ -216,15 +216,15 @@ def highlight_true(val):
     return f"background-color: {color}"
 
 
-def color_bar_affected(val):
+def color_bar_affected(df_sorted, val):
     if isinstance(val, (int, float)) and not pd.isna(val):
         return f'background: linear-gradient(90deg, orange {val/df_sorted["Total Affected"].max()*100}%, transparent {val/df_sorted["Total Affected"].max()*100}%);'
     return ""
 
 
-def color_bar_cerf(val):
+def color_bar_cerf(df_sorted, val):
     if isinstance(val, (int, float)) and not pd.isna(val):
-        return f'background: linear-gradient(90deg, green {val/df_sorted["CERF Allocations (USD)"].max()*100}%, transparent {val/df_sorted["CERF Allocations (USD)"].max()*100}%);'
+        return f'background: linear-gradient(90deg, green {val/df_sorted["CERF Allocations"].max()*100}%, transparent {val/df_sorted["CERF Allocations"].max()*100}%);'
     return ""
 
 def calculate_rp(group, col_name, total_seasons):
