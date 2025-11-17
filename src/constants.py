@@ -2,6 +2,7 @@ import os
 import pandas as pd
 
 # Conversion factors
+iso3 = "moz"
 moz_epsg = 3857
 KNOTS2MS = 0.514444
 KPH2KNOTS = 1.852
@@ -27,6 +28,7 @@ ADMS = [
     "Zambezia",
     "Gaza",
     "Cabo Delgado",
+    "Maputo"
 ]
 
 # List of specific districts or cities (ADMs2) for further analysis
@@ -195,4 +197,3 @@ storm_df = pd.DataFrame(
         ],
     }
 )
-]
