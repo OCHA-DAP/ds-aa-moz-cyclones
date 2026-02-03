@@ -12,7 +12,7 @@ psycopg2-binary==2.9.10
 pyarrow==18.0.0
 python-dotenv==1.0.1
 rasterstats==0.20.0
-requests==2.32.3
+requests==2.32.4
 rioxarray==0.18.1
 scipy==1.14.1
 seaborn==0.13.2
